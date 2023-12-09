@@ -1,0 +1,11 @@
+PASSO A PASSO PARA A EXECUÇAO DO PROJETO:
+
+1 - instalar git
+2 - utilizei Intellij. Se a IDE nao tiver mvn nativo, deve ser baixado e configurado na maquina.
+3 - indicar m2 repository na IDE utilizada para executar o projeto de avaliaçao ekan na configuraçao de mvn da IDE
+4 - mvn clean install
+5 - startar a aplicaçao através da classe main no modulo starter
+6 - abrir http://localhost:8080/swagger-ui/index.html
+7 - para testes, foi implementado o spring security com autenticacao in-memory. Para logar, o usuário e senha sao respectivamente ekan e ekan.
+obs: user: ekan
+     password: ekan
