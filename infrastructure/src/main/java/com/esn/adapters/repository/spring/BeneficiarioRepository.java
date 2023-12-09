@@ -2,7 +2,6 @@ package com.esn.adapters.repository.spring;
 
 import com.esn.Beneficiario;
 import com.esn.entities.jpa.BeneficiarioEntity;
-import com.esn.entities.jpa.DocumentoEntity;
 import com.esn.entities.jpa.mapper.BeneficiarioEntityMapper;
 import com.esn.entities.jpa.mapper.DocumentoEntityMapper;
 import com.esn.ports.BeneficiarioRepositoryPort;
@@ -12,8 +11,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
-import static java.util.Objects.isNull;
 
 @Component
 public class BeneficiarioRepository implements BeneficiarioRepositoryPort {

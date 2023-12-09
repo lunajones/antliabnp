@@ -5,7 +5,6 @@ import com.esn.adapters.rest.mappers.BeneficiarioMapper;
 import com.esn.adapters.rest.requests.BeneficiarioRequest;
 import com.esn.adapters.rest.responses.BeneficiarioResponse;
 import com.esn.ports.BeneficiarioServicePort;
-import org.mapstruct.Mapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

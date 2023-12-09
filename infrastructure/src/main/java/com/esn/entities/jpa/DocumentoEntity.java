@@ -1,6 +1,5 @@
 package com.esn.entities.jpa;
 
-import com.esn.Beneficiario;
 import com.esn.Documento;
 import com.esn.enums.TipoDocumento;
 import jakarta.persistence.*;

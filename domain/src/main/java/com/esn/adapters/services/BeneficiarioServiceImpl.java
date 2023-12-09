@@ -1,18 +1,14 @@
 package com.esn.adapters.services;
 
 import com.esn.Beneficiario;
-import com.esn.Documento;
-import com.esn.enums.TipoDocumento;
 import com.esn.ports.BeneficiarioRepositoryPort;
 import com.esn.ports.BeneficiarioServicePort;
 import com.esn.ports.DocumentoServicePort;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 

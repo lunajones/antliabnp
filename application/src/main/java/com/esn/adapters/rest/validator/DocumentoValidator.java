@@ -6,7 +6,6 @@ import com.esn.enums.TipoDocumento;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DocumentoValidator {
     private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};

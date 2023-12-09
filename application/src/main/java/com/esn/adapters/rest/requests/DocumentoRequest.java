@@ -2,10 +2,6 @@ package com.esn.adapters.rest.requests;
 
 import com.esn.enums.TipoDocumento;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.UUID;
-
 public class DocumentoRequest {
     private TipoDocumento tipoDocumento;
     private String descricao;

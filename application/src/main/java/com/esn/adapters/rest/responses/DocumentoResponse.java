@@ -2,7 +2,6 @@ package com.esn.adapters.rest.responses;
 
 import com.esn.enums.TipoDocumento;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 

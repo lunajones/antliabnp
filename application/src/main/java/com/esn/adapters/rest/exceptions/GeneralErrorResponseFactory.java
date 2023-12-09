@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.util.logging.Logger;
-
 public class GeneralErrorResponseFactory {
 
     public static ExceptionBuilder get() { return new ExceptionBuilder(); }

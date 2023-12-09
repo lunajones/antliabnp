@@ -2,11 +2,9 @@ package com.esn.adapters.services;
 
 import com.esn.Beneficiario;
 import com.esn.Documento;
-import com.esn.ports.BeneficiarioServicePort;
 import com.esn.ports.DocumentoRepositoryPort;
 import com.esn.ports.DocumentoServicePort;
 
-import javax.print.Doc;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
