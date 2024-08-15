@@ -1,7 +1,7 @@
 package com.esn.ports;
 
-import com.esn.Beneficiario;
-import com.esn.Documento;
+import com.esn.Produto;
+import com.esn.ProdutoCosif;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,11 +9,11 @@ import java.util.UUID;
 public interface DocumentoServicePort {
 
 
-    List<Documento> findAllByBeneficiarioId(UUID id);
+    List<ProdutoCosif> findAllByBeneficiarioId(UUID id);
 
-    List<Documento> saveAll(List<Documento> documentos, UUID beneficiarioId);
+    List<ProdutoCosif> saveAll(List<ProdutoCosif> produtoCosifs, UUID beneficiarioId);
 
-    List<Documento> modify(List<Documento> documentos, Beneficiario beneficiario);
+    List<ProdutoCosif> modify(List<ProdutoCosif> produtoCosifs, Produto produto);
 
     void deleteAllByBeneficiarioId(UUID beneficiarioId);
 

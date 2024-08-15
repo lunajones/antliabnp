@@ -1,6 +1,6 @@
 package com.esn.adapters.rest.mappers;
 
-import com.esn.Documento;
+import com.esn.ProdutoCosif;
 import com.esn.adapters.rest.requests.DocumentoRequest;
 import com.esn.adapters.rest.responses.DocumentoResponse;
 import org.mapstruct.Mapper;
@@ -16,7 +16,7 @@ public interface DocumentoMapper {
 
     @Mapping(source = "tipoDocumento", target = "withTipoDocumento")
     @Mapping(source = "descricao", target = "withDescricao")
-    Documento toDomainFromRequest(DocumentoRequest request);
-    List<DocumentoResponse> toResponsesFromDomains(List<Documento> documentos);
+    ProdutoCosif toDomainFromRequest(DocumentoRequest request);
+    List<DocumentoResponse> toResponsesFromDomains(List<ProdutoCosif> produtoCosifs);
 
 }

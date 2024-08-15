@@ -1,19 +1,19 @@
 package com.esn.ports;
 
-import com.esn.Beneficiario;
+import com.esn.Produto;
 
 import java.util.List;
 import java.util.UUID;
 
 public interface BeneficiarioServicePort {
 
-    public Beneficiario create(Beneficiario beneficiario);
+    public Produto create(Produto produto);
 
-    public List<Beneficiario> findAll();
+    public List<Produto> findAll();
 
-    public Beneficiario findById(UUID id);
+    public Produto findById(UUID id);
 
-    public Beneficiario modify(Beneficiario beneficiario);
+    public Produto modify(Produto produto);
 
     public void remove(UUID id);
 

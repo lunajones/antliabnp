@@ -1,6 +1,6 @@
 package com.esn.adapters.rest;
 
-import com.esn.Documento;
+import com.esn.ProdutoCosif;
 import com.esn.adapters.rest.mappers.DocumentoMapper;
 import com.esn.adapters.rest.responses.DocumentoResponse;
 import com.esn.ports.DocumentoServicePort;
@@ -32,11 +32,11 @@ public class DocumentoController {
     public ResponseEntity<List<DocumentoResponse>> findAllByBeneficiarioId(@PathVariable UUID id) {
         documentoServicePort.findAllByBeneficiarioId(id);
 
-        List<Documento> documentos = documentoServicePort.findAllByBeneficiarioId(id);
+        List<ProdutoCosif> produtoCosifs = documentoServicePort.findAllByBeneficiarioId(id);
 
-        if(isNull(documentos)){
+        if(isNull(produtoCosifs)){
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
-        return ResponseEntity.ok(DocumentoMapper.INSTANCE.toResponsesFromDomains(documentos));
+        return ResponseEntity.ok(DocumentoMapper.INSTANCE.toResponsesFromDomains(produtoCosifs));
     }
 }

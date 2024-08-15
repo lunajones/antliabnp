@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Hello world!
- *
+ * antlia - bnp
+ * @Author Elmir S Nascimento - esn
  */
 @SpringBootApplication
 public class App

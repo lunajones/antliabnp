@@ -45,8 +45,8 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService() {
 
         UserDetails user = User
-                .withUsername("ekan")
-                .password("{noop}ekan")
+                .withUsername("antliabnp")
+                .password("{noop}antliabnp")
                 .roles("USER")
                 .build();
         return new InMemoryUserDetailsManager(user);

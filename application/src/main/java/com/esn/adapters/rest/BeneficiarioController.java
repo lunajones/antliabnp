@@ -1,6 +1,6 @@
 package com.esn.adapters.rest;
 
-import com.esn.Beneficiario;
+import com.esn.Produto;
 import com.esn.adapters.rest.mappers.BeneficiarioMapper;
 import com.esn.adapters.rest.requests.BeneficiarioRequest;
 import com.esn.adapters.rest.responses.BeneficiarioResponse;
@@ -36,8 +36,8 @@ public class BeneficiarioController {
 
     @GetMapping("/all")
     public ResponseEntity<List<BeneficiarioResponse>> findAll() {
-        List<Beneficiario> beneficiarios = beneficiarioServicePort.findAll();
-        if(beneficiarios.isEmpty()){
+        List<Produto> produtos = beneficiarioServicePort.findAll();
+        if(produtos.isEmpty()){
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
         return ResponseEntity.ok(BeneficiarioMapper.INSTANCE.toResponsesFromDomains(beneficiarioServicePort.findAll()));
@@ -47,12 +47,12 @@ public class BeneficiarioController {
     public ResponseEntity<BeneficiarioResponse> update(@PathVariable UUID id, @RequestBody BeneficiarioRequest request) {
         validaDocumentos(request.getDocumentos());
 
-        Beneficiario beneficiario = beneficiarioServicePort.modify(BeneficiarioMapper.INSTANCE.toDomainFromRequestAndUUID(request, id));
+        Produto produto = beneficiarioServicePort.modify(BeneficiarioMapper.INSTANCE.toDomainFromRequestAndUUID(request, id));
 
-        if(isNull(beneficiario)){
+        if(isNull(produto)){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return ResponseEntity.ok(BeneficiarioMapper.INSTANCE.toResponseFromDomain(beneficiario));
+        return ResponseEntity.ok(BeneficiarioMapper.INSTANCE.toResponseFromDomain(produto));
     }
 
     @DeleteMapping("/{id}")

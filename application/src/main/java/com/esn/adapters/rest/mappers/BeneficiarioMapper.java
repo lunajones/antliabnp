@@ -1,7 +1,7 @@
 package com.esn.adapters.rest.mappers;
 
-import com.esn.Beneficiario;
-import com.esn.Documento;
+import com.esn.Produto;
+import com.esn.ProdutoCosif;
 import com.esn.adapters.rest.requests.BeneficiarioRequest;
 import com.esn.adapters.rest.requests.DocumentoRequest;
 import com.esn.adapters.rest.responses.BeneficiarioResponse;
@@ -24,30 +24,30 @@ public interface BeneficiarioMapper {
     @Mapping(source = "telefone", target = "withTelefone")
     @Mapping(source = "dataNascimento", target = "withDataNascimento")
     @Mapping(source = "documentos", target = "withDocumentos", qualifiedByName = "convertToDomain")
-    Beneficiario toDomainFromRequest(BeneficiarioRequest request);
+    Produto toDomainFromRequest(BeneficiarioRequest request);
 
     @Mapping(source = "request.nome", target = "withNome")
     @Mapping(source = "request.telefone", target = "withTelefone")
     @Mapping(source = "request.dataNascimento", target = "withDataNascimento")
     @Mapping(source = "request.documentos", target = "withDocumentos", qualifiedByName = "convertToDomain")
     @Mapping(source = "id", target = "withId")
-    Beneficiario toDomainFromRequestAndUUID(BeneficiarioRequest request, UUID id);
+    Produto toDomainFromRequestAndUUID(BeneficiarioRequest request, UUID id);
 
 
     @Mapping(source = "documentos", target = "documentos", qualifiedByName = "convertToResponses")
-    BeneficiarioResponse toResponseFromDomain(Beneficiario beneficiario);
+    BeneficiarioResponse toResponseFromDomain(Produto produto);
 
-    List<BeneficiarioResponse> toResponsesFromDomains(List<Beneficiario> beneficiarios);
+    List<BeneficiarioResponse> toResponsesFromDomains(List<Produto> produtos);
 
 
     @Named("convertToDomain")
-    public static List<Documento> convertToDomain(List<DocumentoRequest> requests) {
+    public static List<ProdutoCosif> convertToDomain(List<DocumentoRequest> requests) {
         return requests.stream().map(DocumentoMapper.INSTANCE::toDomainFromRequest).collect(Collectors.toList());
     }
 
     @Named("convertToResponses")
-    public static List<DocumentoResponse> convertToResponses(List<Documento> documentos) {
-        return DocumentoMapper.INSTANCE.toResponsesFromDomains(documentos);
+    public static List<DocumentoResponse> convertToResponses(List<ProdutoCosif> produtoCosifs) {
+        return DocumentoMapper.INSTANCE.toResponsesFromDomains(produtoCosifs);
     }
 
 }
